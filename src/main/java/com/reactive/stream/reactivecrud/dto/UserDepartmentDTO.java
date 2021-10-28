@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 public class UserDepartmentDTO {
+
     private Integer userId;
     private String userName;
     private int age;
@@ -17,4 +18,5 @@ public class UserDepartmentDTO {
     private Integer departmentId;
     private String departmentName;
     private String loc;
+
 }

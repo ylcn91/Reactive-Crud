@@ -16,11 +16,15 @@ import java.util.List;
 @Component
 public class UserInitializer implements CommandLineRunner {
 
-    @Autowired
-    private UserRepository userRepository;
+
+    private final UserRepository userRepository;
+    private final DepartmentRepository departmentRepository;
 
     @Autowired
-    private DepartmentRepository departmentRepository;
+    public UserInitializer(UserRepository userRepository, DepartmentRepository departmentRepository) {
+        this.userRepository = userRepository;
+        this.departmentRepository = departmentRepository;
+    }
 
     @Override
     public void run(String... args) {

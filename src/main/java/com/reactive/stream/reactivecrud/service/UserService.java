@@ -6,6 +6,7 @@ import com.reactive.stream.reactivecrud.model.User;
 import com.reactive.stream.reactivecrud.repository.DepartmentRepository;
 import com.reactive.stream.reactivecrud.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
@@ -24,7 +25,7 @@ public class UserService {
     private UserRepository userRepository;
     private DepartmentRepository departmentRepository;
 
-    
+    @Autowired
     public UserService(UserRepository userRepository, DepartmentRepository departmentRepository) {
         this.userRepository = userRepository;
         this.departmentRepository = departmentRepository;

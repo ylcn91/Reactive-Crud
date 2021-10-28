@@ -15,6 +15,7 @@ public class UserClientController {
 
     private final UserClient userClient;
 
+    @Autowired
     public UserClientController(UserClient userClient) {
         this.userClient = userClient;
     }
