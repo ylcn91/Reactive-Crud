@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS users ;
+CREATE TABLE users ( id BIGINT NOT NULL AUTO_INCREMENT,PRIMARY KEY (id), name VARCHAR(100) NOT NULL, age integer,salary decimal);
+DROP TABLE IF EXISTS department ;
+CREATE TABLE department ( id BIGINT NOT NULL AUTO_INCREMENT ,PRIMARY KEY (id),user_id integer, name VARCHAR(100) NOT NULL, loc VARCHAR(100));
+
